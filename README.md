@@ -8,8 +8,11 @@
 ### 上机作业
 
 上机作业在openjudge子目录下，目前只收录两个来源的题目：
-- [数据结构与算法(Python语言实现)教材题库](http://dsbpython.openjudge.cn/dspythonbook/)
-- [随课程练习](https://xzmdsa.openjudge.cn)
+ - [数据结构与算法(Python语言实现)教材题库](http://dsbpython.openjudge.cn/dspythonbook/)
+ - [课程同步作业](https://xzmdsa.openjudge.cn)
+
+前者里面有200道题；后者随课程进度发布，共8次左右作业，每次5-7题。
+
 请阅读该目录下的README文件，本学期针对**先登**荣誉，每登提供0.2分的加分；对**夺旗**荣誉，每旗提供0.8的加分。为了让每个人都有参与的机会，限制每个github账户每天只能发起一次pull_request。
 
 ### Markdown格式
