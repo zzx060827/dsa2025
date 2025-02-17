@@ -19,7 +19,7 @@
 
 我们用的是一种Crowdsource的松散协作方式，maintainer之外的contributor对主仓库并不具有直接的写权限，需要先fork主仓库到自己的github账户下进行工作，根据工作的主题新开一个branch，在该branch下面完成工作后向主仓库提出pull request(pr)申请，maintainer和其他contributor可以review该pr，contributor根据别人的review可以修改pr的内容，最终满意后由maintainer把pr的工作内容合并进主仓库。流程基本就是：<br>
 fork ==> branch ==> commit* ==> pull_request ==> (review, commit)* ==> merge,close<br>
-contributor下次开新的branch的时候，并不需要每次都fork主仓库，和主仓库的多同步可以得到主仓库最新的内容。
+contributor下次开新的branch的时候，并不需要每次都fork主仓库，和主仓库多同步以获得最新的内容。
 
 
 参考：<br>
