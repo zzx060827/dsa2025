@@ -7,9 +7,14 @@
 
 ### 上机作业
 
+上机作业在openjudge子目录下，目前只收录两个来源的题目：
+- [数据结构与算法(Python语言实现)教材题库](http://dsbpython.openjudge.cn/dspythonbook/)
+- [随课程练习](https://xzmdsa.openjudge.cn)
+请阅读该目录下的README文件，本学期针对**先登**荣誉，每登提供0.2分的加分；对**夺旗**荣誉，每旗提供0.8的加分。为了让每个人都有参与的机会，限制每个github账户每天只能发起一次pull_request。
+
 ### Markdown格式
 
-一种很受欢迎的写文档的工具。如果要写一本很“漂亮”的书，那是比不上LaTex的。Markdown可以通过嵌入html来获得一些丰富的格式，但对于在线文档，最简单的格式和功能就足够了。Markdown最大的好处是**简单**，高端的食材往往只需要最简单的烹饪方法。
+一种很受欢迎的写文档的工具。如果要写一本很“漂亮”的书，那是比不上LaTex的。Markdown可以通过嵌入html来获得一些丰富的格式，但对于在线文档，最简单的格式和功能就足够了。Markdown最大的好处是**简单高效**，高端的食材往往只需要最简单的烹饪方法。
 
 参考：<br>
 [Markdown基本语法](https://www.markdownguide.org/basic-syntax/)
