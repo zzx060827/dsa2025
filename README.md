@@ -29,6 +29,10 @@
 fork ==> branch ==> commit* ==> pull_request ==> (review, commit)* ==> merge,close<br>
 contributor下次开新的branch的时候，并不需要每次都fork主仓库，和主仓库多同步以获得最新的内容。
 
+常见的问题：
+- contributor不要修改自己的main分支，而是新建branch上commit。main分支需要经常同步maintainer的仓库，可能会出现版本冲突问题。新建branch的名字应该与准备提交的内容有关，在发起pull request时应该对工作内容有简单的描述。
+- git主要的优势在于管理文本内容，因此非文本的内容在git仓库中尽量避免。非必要也不要在文档中插入图片。从目前的需求看，只使用文本是足够的。
+
 
 参考：<br>
 [How to contribute to open source projects (our community project walkthrough)](https://www.youtube.com/watch?v=dLRA1lffWBw)
