@@ -2,7 +2,7 @@
 
 这里用来刷OpenJudge上的题。contributor提交本目录下的内容应该遵守下面的规则：<br>
 - OpenJudge上的每个题都有一个全局题号，用全局题号作为子目录名来存放该题的题目、答案、答题文档。
-- 题目存放在README.md文件中
+- 题目存放在README.md文件中，题目应该跟OJ内容一致。如果需要的话，应该补充它在比赛中的题目ID，比方说P0510之类。
 - 答案存放在id.py文件中，id为contributer的学号
 - 答题文档放在id.md文件中，同上，id为contributor的学号。答题文档必须包括在OJ上的运行结果，并且标明contributor的姓名。一份良好的答题文档还可以包括：
 	- 问题的分析
