@@ -1,16 +1,20 @@
-st=input()
-s=[char for char in st]
+s=input()
 
-s.sort()
-
-def pmt(s,t):
-    if len(s)==1:
-        t.append(s[0])
-        print(''.join(t))
+def imrg(s):
+    if len(s)<3:
+        return s
     else:
-        for i in range(len(s)):
-            t1=t+[s[i]]
-            s1=s[:i]+s[i+1:]
-            pmt(s1,t1)
+        i=0
+        bo=0
+        while i<=len(s)-3:
+            if s[i:i+3]=='PKU':
+                s=s[:i]+s[i+3:]
+                bo=1
+            else:
+                i=i+1
+        if bo==1:
+            return imrg(s) 
+        else:
+            return s
 
-pmt(s,[])            
+print(imrg(s))
