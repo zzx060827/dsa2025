@@ -20,8 +20,9 @@
 一种很受欢迎的写文档的工具。如果要写一本很“漂亮”的书，那是比不上LaTex的。Markdown可以通过嵌入html来获得一些丰富的格式，但对于在线文档，最简单的格式和功能就足够了。Markdown最大的好处是**简单高效**，高端的食材往往只需要最简单的烹饪方法。
 
 参考：<br>
-[Markdown基本语法](https://www.markdownguide.org/basic-syntax/)
-[Obsidian](https://obsidian.md/) Markdown编辑工具
+- [Markdown基本语法](https://www.markdownguide.org/basic-syntax/)
+- [Obsidian](https://obsidian.md/) Markdown编辑工具
+
 ### 如何协作--提交代码并参与讨论
 
 利用github.com的pull request功能，进行线上协作与讨论。
