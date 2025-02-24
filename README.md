@@ -46,3 +46,9 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 
 这里有一些上网的资源可供利用：[Clash](https://blog.189854.xyz/blog/walless/2023/11/04/clash.html)|[验证PKU邮箱](https://189854.xyz/verify/)
 
+### 课程进度、作业及重要通知
+| 时间  | 课程进度  | 作业                  | 重要通知 |
+| --- | ----- | ------------------- | ---- |
+| 第一周 | 引言及概论 | 自学git，熟悉github、OJ功能 |      |
+|     |       |                     |      |
+
