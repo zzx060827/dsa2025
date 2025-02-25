@@ -56,4 +56,4 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 | 第二周 | Python入门| OJ作业[Python入门](http://xzmdsa.openjudge.cn/2025python/)|
 
 ###  重要通知
-- 2/23/2025 因为在大家的提交中存在一些通病，暂定先登刷题的pr
+- 2/23/2025 因为在大家的提交中存在一些通病，暂停先登刷题的pr
