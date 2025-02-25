@@ -53,6 +53,7 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 | 时间  | 课程进度  | 作业                  |
 | --- | ----- | ------------------- |
 | 第一周 | 引言及概论 | 自学git，熟悉github、OJ功能| 
+| 第二周 | Python入门| OJ作业[Python入门](http://xzmdsa.openjudge.cn/2025python/)|
 
 ###  重要通知
 - 2/23/2025 因为在大家的提交中存在一些通病，暂定先登刷题的pr
