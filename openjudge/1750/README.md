@@ -17,15 +17,16 @@
 s1 = t1, s2 = t2, ..., sp - 1 = tp - 1, sp < tp成立。
 
 ## 样例输入
+```
 abc
+```
 ## 样例输出
+```
 abc
 acb
 bac
 bca
 cab
 cba
-
-
-```python
 ```
+
