@@ -22,9 +22,3 @@ def min_prize(n, m, matches):
 n,m=map(int,input().split())
 matches=[tuple(map(int,input().split()))for _ in range(m)]
 print(min_prize(n, m, matches))
-
-
-#input().split()：获取每行输入并将其按空格分割成一个列表；
-#map(int, ...)：将列表中的每个元素转成整数；
-#tuple(...)：将转换后的结果转换成一个元组 (a, b)，表示队伍a打败了队伍b；
-#[ ... for _ in range(m)]：将这种转换应用到m次输入。
