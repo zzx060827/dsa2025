@@ -1,17 +1,5 @@
 ## P0350:2的幂次方表示
-
-- [查看](http://dsbpython.openjudge.cn/dspythonbook/P0350/)
-- [提交](http://dsbpython.openjudge.cn/dspythonbook/P0350/submit/)
-- [统计](http://dsbpython.openjudge.cn/dspythonbook/P0350/statistics/)
-- [提问](http://dsbpython.openjudge.cn/dspythonbook/clarify/P0350/)
-
-- 总时间限制: 
-
-  1000ms
-
-- 内存限制: 
-
-  65536kB
+- 总时间限制: 1000ms  内存限制: 65536kB
 
 - 描述
 
