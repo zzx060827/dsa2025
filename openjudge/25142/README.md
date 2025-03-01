@@ -16,7 +16,7 @@
 给定一个文本缩进二叉树的中序、后序遍历序列，请输出该文本二叉树。
 
 样例输入的二叉树如下图
-![fig](http://media.openjudge.cn/images/upload/7473/1662290002.png)
+![fig](images/1662290002.png)
 
 ### 输入
 
