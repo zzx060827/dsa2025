@@ -11,8 +11,8 @@ else:
  leftmax=[[0,0] for i in range(n-1)]
  for i in range(n-1):
     if i==0:
-        leftmax[i][1]=b[0] #leftmax[i][1]保存当坐入第i个位置时若右侧被占，前面所有座位最大能力值总和
-        leftmax[i][0]=a[0] #反之
+        leftmax[i][1]=b[0] #leftmax[i][1]保存当坐入第i个位置时若右侧已被占，前面所有座位最大能力值总和
+        leftmax[i][0]=a[0] #反之，右侧未被占
     else:
         leftmax[i][1]=max(leftmax[i-1][1]+b[i],leftmax[i-1][0]+c[i])
         leftmax[i][0]=max(leftmax[i-1][1]+a[i],leftmax[i-1][0]+b[i])
