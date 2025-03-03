@@ -1,21 +1,21 @@
-def popsequence(x, seq):
-    stack = []
-    idx = 0  # 记录压入栈的字符位置
-    for char in seq:    # 模拟压栈和出栈
-        while idx < len(x) and (not stack or stack[-1] != char):        # 压栈：直到栈顶是目标字符
-            stack.append(x[idx])
-            idx += 1
-        if stack and stack[-1] == char:
-            stack.pop()  # 出栈
-        else:# 如果栈顶不是当前要出栈的字符，说明不合法
+def check_pop_sequence(origin, target):
+    stack = []  # 模拟栈，用于存储压入的字符
+    i = 0  # 指向 origin 的索引，用于逐步压栈
+    for t in target:
+        while i < len(origin) and (not stack or stack[-1] != t):
+            stack.append(origin[i])  
+            i += 1  
+        if stack and stack[-1] == t:
+            stack.pop()
+        else:
             return "NO"
-    if len(x)!=len(seq): return "NO"
+    if len(origin) != len(target):
+        return "NO"
     return "YES"
-x = input()
-result=[]
+origin = input()
 while True:
     try:
-        seq = input()
-        print(popsequence(x, seq))
+        target = input()  
+        print(check_pop_sequence(origin, target)) 
     except EOFError:
-        break
+        break  
