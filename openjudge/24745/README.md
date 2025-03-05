@@ -6,7 +6,7 @@
 请填空补齐寻找第一个共享结点的 findJointPoint 函数
 
 不必阅读 genLinkList函数，只要知道它返回两个交叉成Y字形的链表a和b即可。
-
+```
 class Node:
 	def __init__(self, data, next=None):
 		self.data, self.next = data, next
@@ -39,6 +39,7 @@ a,b = genLinkList()
 def findJointPoint(a,b):
 // 在此处补充你的代码
 print(findJointPoint(a,b))
+```
 ## 输入
 第1行：不超过100000个整数，是链表a最初的内容
 第2行：不超过100000个整数，是链表b的内容
