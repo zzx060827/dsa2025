@@ -9,6 +9,7 @@ The input data will start with the number of the test cases. For each test case,
 # 输出
 For each test case your program should print the solution in the same format as the input data. The empty cells have to be filled according to the rules. If solutions is not unique, then the program may print any one of them.
 # 样例输入
+```
 1
 103000509
 002109400
@@ -19,7 +20,9 @@ For each test case your program should print the solution in the same format as 
 000401000
 009205800
 804000107
+```
 # 样例输出
+```
 143628579
 572139468
 986754231
@@ -29,3 +32,4 @@ For each test case your program should print the solution in the same format as 
 237481695
 619275843
 854396127
+```
