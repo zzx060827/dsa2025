@@ -15,8 +15,7 @@
 不要求只能写这两个函数，可以写额外的辅助函数
 
 ### 已给出代码：
-
-     class TreeNode: #节点类
+    class TreeNode: #节点类
     	#father在删除节点的时候有用,以及找一个节点的后继节点的时候有用
     	def __init__(self,key,val,father=None,left=None,right=None):
     		self.key,self.val,self.left,self.right ,self.father \
@@ -158,8 +157,20 @@
     		else:
     			nd.val = value
 
-    在此补充你的代码
+        // 在此补充你的代码
 
+    tree = Tree()
+    while True:
+    	try:
+    		s = input().split()
+    		if s[0] == "ADD":
+    			tree[int(s[1])] = int(s[1])
+    		elif s[0] == "LB":
+    			print(tree.lower_bound(int(s[1])))
+    		elif s[0] == "UB":
+    			print(tree.upper_bound(int(s[1])))
+    	except:
+    		break
     
 
 ### 输入
