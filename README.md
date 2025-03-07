@@ -11,22 +11,21 @@
  - [数据结构与算法(Python语言实现)教材题库](http://dsbpython.openjudge.cn/dspythonbook/)
  - [课程同步作业](http://xzmdsa.openjudge.cn)
 
+前者里面有200道题；后者随课程进度发布，共8次左右作业，每次5-7题。
+
+请阅读该目录下的README文件，本学期针对**先登**荣誉，每登提供0.2分的加分；对**夺旗**荣誉，每旗提供0.8的加分。为了让每个人都有参与的机会，限制每个github账户每天（GMT时间）只能发起一次pull_request。
+
 登录OJ账号之后请加入[数算B谢正茂班](http://xzmdsa.openjudge.cn),选择“数算B13班-2025春季”，把在班中的昵称改为“学号+姓名”，这样每次的作业和考试才会有成绩。
 
 上机课时间为每周四5-6节，地点为计算中心7-8号机房
 - 【腾讯文档】[数算B-13班上机座次表]( https://docs.qq.com/sheet/DSnhIcVJDTnVHcER0?tab=txwm2e)
 
-前者里面有200道题；后者随课程进度发布，共8次左右作业，每次5-7题。
-
-请阅读该目录下的README文件，本学期针对**先登**荣誉，每登提供0.2分的加分；对**夺旗**荣誉，每旗提供0.8的加分。为了让每个人都有参与的机会，限制每个github账户每天只能发起一次pull_request。
-
 ### Markdown格式
 
-一种很受欢迎的写文档的工具。如果要写一本很“漂亮”的书，那是比不上LaTex的。Markdown可以通过嵌入html来获得一些丰富的格式，但对于在线文档，最简单的格式和功能就足够了。Markdown最大的好处是**简单高效**，高端的食材往往只需要最简单的烹饪方法。
+一种很受欢迎的写文档的工具。如果要写一本很“漂亮”的书，那是比不上LaTex的。Markdown可以通过嵌入html来获得一些丰富的格式，但对于在线文档，最简单的格式和功能就足够了。Markdown最大的好处是**简单高效**，高端的食材往往只需要最简单的烹饪方法。VScode就可以很好的编辑、预览md。
 
 参考：<br>
 - [Markdown基本语法](https://www.markdownguide.org/basic-syntax/)
-- [Obsidian](https://obsidian.md/) Markdown编辑工具
 
 ### 如何协作--提交代码并参与讨论
 
