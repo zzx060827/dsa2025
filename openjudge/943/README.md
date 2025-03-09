@@ -55,4 +55,7 @@
   /__\
   ```
 
-  
+- 提示：
+
+![The Sierpinski-Triangle up to recursion depth 7](images/1437547268.jpg)
+
