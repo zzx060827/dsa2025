@@ -8,12 +8,12 @@
 
 例如，对于下图所示的迷宫：
 
-![示例图片](https://raw.githubusercontent.com/fireeeeeeeeeeeeeeeeeeeeeeeeee/lmb/refs/heads/main/picture1.png "示例图片标题")
+![示例图片](images/1639660715.png "示例图片标题")
 
 
 小锅可以如下图红线所示从迷宫左上角的入口抵达迷宫右下角的出口：\
 
-![示例图片](https://raw.githubusercontent.com/fireeeeeeeeeeeeeeeeeeeeeeeeee/lmb/refs/heads/main/picture2.jpg "示例图片标题")
+![示例图片](images/1639660728.jpg "示例图片标题")
 
 # 逃出迷宫问题描述
 
