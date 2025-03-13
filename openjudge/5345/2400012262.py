@@ -1,31 +1,44 @@
-N, M = map(int, input().split())
-nums = list(map(int, input().split()))
+n, m_ops = map(int, input().split())
+x_list = list(map(int, input().split()))
 
-bit_counts = [0] * 16
-for num in nums:
-    for i in range(16):
-        if num & (1 << i):
-            bit_counts[i] += 1
+pre_list = []
+for i in range(16):
+    m = 1 << (i + 1)
+    cnt = [0] * m
+    for x in x_list:
+        r = x % m
+        cnt[r] += 1
+    pre = [0] * m
+    pre[0] = cnt[0]
+    for r in range(1, m):
+        pre[r] = pre[r - 1] + cnt[r]
+    pre_list.append(pre)
 
-offset = 0
-res = []
+D = 0  
 
-for _ in range(M):
-    cmd, val = input().split()
-    val = int(val)
-    if cmd == 'C':
-        offset = (offset + val) % 65536
-    elif cmd == 'Q':
-        cnt = 0
-        mask = 1 << val
-        for i in range(16):
-            if (offset & (1 << i)):
-                real_bit = (val - i + 16) % 16
-                cnt += (N - bit_counts[real_bit]) if mask & (1 << i) else bit_counts[real_bit]
+for _ in range(m_ops):
+    parts = input().split()
+    if parts[0] == 'C':
+        d = int(parts[1])
+        D = (D + d) % 65536
+    else:
+        i = int(parts[1])
+        m = 1 << (i + 1)
+        threshold = 1 << i
+        b = D % m
+        s = (threshold - b) % m
+        e = (m - 1 - b) % m
+        pre = pre_list[i]
+        
+        if s <= e:
+            if s == 0:
+                total = pre[e]
             else:
-                real_bit = (val - i + 16) % 16
-                cnt += bit_counts[real_bit] if mask & (1 << i) else 0
-        res.append(cnt)
-
-for ans in res:
-    print(ans)
+                total = pre[e] - pre[s - 1]
+        else:
+            part1 = pre[m - 1]
+            if s > 0:
+                part1 -= pre[s - 1]
+            part2 = pre[e] if e >= 0 else 0
+            total = part1 + part2
+        print(total)
