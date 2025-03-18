@@ -59,7 +59,8 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 | 第一周 | 引言及概论    | 自学git，熟悉github、OJ功能                                    |     |
 | 第二周 | Python入门 | OJ作业[Python入门](http://xzmdsa.openjudge.cn/2025python/) |     |
 | 第三周 | 算法分析     |                                                        |     |
-| 第四周 | 线性表     |        OJ作业[线性表](http://xzmdsa.openjudge.cn/)       |     |
+| 第四周 | 线性表     |        OJ作业[线性表](http://xzmdsa.openjudge.cn/2025hw2/)       |     |
+| 第五周 | 递归与动规 |        OJ作业[递归与动规](http://xzmdsa.openjudge.cn/)      |        |
 
 ###  重要通知
 - 2/25/2025 第三周（3/4/2025）上课时间随堂小测，考察Python基础技能。
