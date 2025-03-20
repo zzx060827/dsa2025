@@ -2,6 +2,11 @@ from stack import Stack
 from in2post import infixToPostfix
 
 def postfixEval(postfixExpr):
+    doMath = {'*': lambda x, y : x * y,
+              '/': lambda x, y : x / y,
+              '+': lambda x, y : x + y,
+              '-': lambda x, y : x - y
+              }
     operandStack = Stack()
     tokenList = postfixExpr.split()
 
@@ -11,24 +16,14 @@ def postfixEval(postfixExpr):
         else:
             operand2 = operandStack.pop()
             operand1 = operandStack.pop()
-            result = doMath(token, operand1, operand2)
+            result = doMath[token](operand1, operand2)
             operandStack.push(result)
     return operandStack.pop()
 
-def doMath(op, op1, op2):
-    if op == "*":
-        return op1 * op2
-    elif op == "/":
-        return op1 / op2
-    elif op == "+":
-        return op1 + op2
-    else:
-        return op1 - op2
-
 if __name__ == "__main__":
-    infix = input("Please input infix expression('q' for Quit): ")
+    infix = input("Please input infix expression(tokens seperated by blank, 'q' for Quit): \n")
     while infix != 'q':
         postfix = infixToPostfix(infix)
         print("postfix is :", postfix)
         print("Result is :", postfixEval(postfix))
-        infix = input("Please input infix expression('q' for Quit): ")
+        infix = input("More expression('q' for Quit): \n")
