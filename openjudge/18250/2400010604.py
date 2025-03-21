@@ -1,59 +1,45 @@
-class DSU:
-    def __init__(self, n):
-        self.parent = list(range(n + 1))
-        self.size = [1] * (n + 1)
+def find(x, parent):
+    """查找x的根节点，并进行路径压缩"""
+    if parent[x] != x:
+        parent[x] = find(parent[x], parent)
+    return parent[x]
 
-    def find(self, x):
-        while self.parent[x] != x:
-            self.parent[x] = self.parent[self.parent[x]]  # 路径压缩
-            x = self.parent[x]
-        return x
+def union(x, y, parent):
+    """合并x和y所在的集合"""
+    root_x = find(x, parent)
+    root_y = find(y, parent)
+    if root_x != root_y:
+        parent[root_y] = root_x
 
-    def union(self, x, y):
-        fx = self.find(x)
-        fy = self.find(y)
-        if fx == fy:
-            return False  # 已经在同一个集合
-        if self.size[fx] < self.size[fy]:
-            fx, fy = fy, fx  # 确保 fx 是更大的集合
-        self.parent[fy] = fx
-        self.size[fx] += self.size[fy]
-        return True
+def solve():
+    while True:
+        try:
+            n, m = map(int, input().split())
+        except EOFError:
+            break
 
+        # 初始化并查集
+        parent = list(range(n + 1))  # 0到n的编号
 
-def process_test_case(n, m, operations):
-    dsu = DSU(n)
-    for x, y in operations:
-        if dsu.find(x) == dsu.find(y):
-            print("Yes")
-        else:
-            dsu.union(x, y)
-            print("No")
-    # 统计有阔落的杯子
-    result = set()
-    for i in range(1, n + 1):
-        result.add(dsu.find(i))
-    print(len(result))
-    print(" ".join(map(str, sorted(result))))
-
-
-def main():
-    import sys
-    input = sys.stdin.read
-    data = input().split()
-    idx = 0
-    while idx < len(data):
-        n = int(data[idx])
-        m = int(data[idx + 1])
-        idx += 2
-        operations = []
+        # 处理m次操作
         for _ in range(m):
-            x = int(data[idx])
-            y = int(data[idx + 1])
-            operations.append((x, y))
-            idx += 2
-        process_test_case(n, m, operations)
+            x, y = map(int, input().split())
+            root_x = find(x, parent)
+            root_y = find(y, parent)
+            if root_x == root_y:
+                print("Yes")
+            else:
+                union(x, y, parent)
+                print("No")
 
+        # 统计结果
+        root_set = set()
+        for i in range(1, n + 1):
+            root_set.add(find(i, parent))
+
+        # 输出结果
+        print(len(root_set))
+        print(" ".join(map(str, sorted(root_set))))
 
 if __name__ == "__main__":
-    main()
+    solve()
