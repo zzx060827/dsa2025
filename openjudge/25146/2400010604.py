@@ -1,49 +1,58 @@
-import sys
-
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.children = []
 
 def build_tree(lines):
-    root = {'label': lines[0].strip(), 'children': []}
-    stack = [{'node': root, 'depth': 0}]
-
-    for line in lines[1:]:
-        depth = line.count('\t')
-        label = line.strip()
-
-        # Find the parent node
-        while stack[-1]['depth'] >= depth:
+    root = None
+    stack = []  # 用于维护当前路径上的节点
+    for line in lines:
+        indent = len(line) - len(line.lstrip())  # 计算缩进量
+        node = TreeNode(line.strip())  # 创建当前节点
+        while stack and stack[-1][1] >= indent:  # 如果栈顶节点的缩进大于等于当前节点的缩进，弹出
             stack.pop()
-
-        parent = stack[-1]['node']
-        new_node = {'label': label, 'children': []}
-        parent['children'].append(new_node)
-        stack.append({'node': new_node, 'depth': depth})
-
+        if stack:  # 如果栈不为空，说明当前节点有父节点
+            parent = stack[-1][0]
+            parent.children.append(node)
+        else:  # 如果栈为空，说明当前节点是根节点
+            root = node
+        stack.append((node, indent))  # 将当前节点及其缩进压入栈
     return root
 
+def preorder_traversal(node, result):
+    if not node:
+        return
+    result.append(node.value)
+    for child in node.children:
+        preorder_traversal(child, result)
 
-def preorder(node):
-    result = [node['label']]
-    for child in node['children']:
-        result.extend(preorder(child))
-    return result
+def postorder_traversal(node, result):
+    if not node:
+        return
+    for child in node.children:
+        postorder_traversal(child, result)
+    result.append(node.value)
 
+def main():
+    lines = []
+    while True:
+        try:
+            line = input()
+            if not line.strip():  # 如果输入为空行，结束输入
+                break
+            lines.append(line)
+        except EOFError:
+            break
 
-def postorder(node):
-    result = []
-    for child in node['children']:
-        result.extend(postorder(child))
-    result.append(node['label'])
-    return result
+    root = build_tree(lines)
+    preorder_result = []
+    postorder_result = []
 
+    preorder_traversal(root, preorder_result)
+    postorder_traversal(root, postorder_result)
+
+    print(''.join(preorder_result))
+    print(''.join(postorder_result))
 
 if __name__ == "__main__":
-    lines = [line.rstrip('\n') for line in sys.stdin]
-    if not lines:
-        print("")
-        print("")
-    else:
-        tree = build_tree(lines)
-        pre = ''.join(preorder(tree))
-        post = ''.join(postorder(tree))
-        print(pre)
-        print(post)
+    main()
