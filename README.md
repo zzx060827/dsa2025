@@ -63,8 +63,10 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 | 第三周 | 算法分析     |                                                        |     |
 | 第四周 | 线性表     |        OJ作业[线性表](http://xzmdsa.openjudge.cn/2025hw2/)       |     |
 | 第五周 | 递归与动规 |        OJ作业[递归与动规](http://xzmdsa.openjudge.cn/)      |        |
+| 第六周 | 递归与动规，KMP |                                                       |        |
 
 ###  重要通知
 - 2/25/2025 第三周（3/4/2025）上课时间随堂小测，考察Python基础技能。
 	- 小测地址：http://xzmdsa.openjudge.cn/pythonbasic/
+- 3/25/2025 第七周（4/1/2025）上课时间随堂小测，考察线性表、递归与动规两章
 
