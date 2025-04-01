@@ -70,4 +70,5 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 - 2/25/2025 第三周（3/4/2025）上课时间随堂小测，考察Python基础技能。
 	- 小测地址：http://xzmdsa.openjudge.cn/pythonbasic/
 - 3/25/2025 第七周（4/1/2025）上课时间随堂小测，考察线性表、递归与动规两章
+	- 小测地址：http://xzmdsa.openjudge.cn/2025test2/
 
