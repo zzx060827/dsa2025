@@ -1,16 +1,25 @@
+
+
 class Node:
-    def __init__(self, initdata=None):
-        self.data = initdata
-        self.next = None
+    def __init__(self, dt=None, nxt=None):
 
-    def getData(self):
-        return self.data
 
-    def getNext(self):
-        return self.next
+        self.data = dt
+        self.next = nxt
 
-    def setData(self, newdata):
-        self.data = newdata
 
-    def setNext(self, newnext):
-        self.next = newnext
+
+
+
+
+if __name__ == "__main__":
+
+    header = None
+    for i in range(5):
+        header = Node(i, header)
+    while header is not None:
+        print(header.data)
+        
+        header = header.next
+
+
