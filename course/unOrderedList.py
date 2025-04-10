@@ -45,6 +45,15 @@ class UnorderedList:
         else:
             previous.next=current.next
 
+    def __str__(self):
+        l = []
+        p = self.head
+        while p is not None:
+            l.append(str(p.data))
+            p = p.next
+        return ' '.join(l)
+
+
 if __name__ == "__main__":
     mylist = UnorderedList()
     print(mylist.head)
@@ -56,3 +65,5 @@ if __name__ == "__main__":
     print(mylist.size())
     mylist.remove(12)
     print(mylist.size())
+
+    
