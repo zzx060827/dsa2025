@@ -8,8 +8,8 @@
 ### 上机作业
 
 上机作业在openjudge子目录下，目前只收录两个来源的题目：
- - [数据结构与算法(Python语言实现)教材题库](http://dsbpython.openjudge.cn/dspythonbook/)
- - [课程同步作业](http://xzmdsa.openjudge.cn)
+ - [数据结构与算法(Python语言实现)教材题库]( http://dsbpython.openjudge.cn/dspythonbook/ )
+ - [课程同步作业]( http://xzmdsa.openjudge.cn )
 
 前者里面有200道题；后者随课程进度发布，共8次左右作业，每次5-7题。
 
@@ -17,17 +17,17 @@
 为了让每个人都有参与的机会，限制每个github账户每天（GMT时间）只能发起一次pull_request；
 同时在期末的加分表格中会列出每个人**先登**的题目和对应的时间，每人一天也只能获得一次**先登**加分，超出的加分顺延到本题的下一位提交者，但**夺旗**无此限制。
 
-登录OJ账号之后请加入[数算B谢正茂班](http://xzmdsa.openjudge.cn),选择“数算B13班-2025春季”，把在班中的昵称改为“学号+姓名”，这样每次的作业和考试才会有成绩。
+登录OJ账号之后请加入[数算B谢正茂班]( http://xzmdsa.openjudge.cn ),选择“数算B13班-2025春季”，把在班中的昵称改为“学号+姓名”，这样每次的作业和考试才会有成绩。
 
 上机课时间为每周四5-6节，地点为计算中心7-8号机房
-- 【腾讯文档】[数算B-13班上机座次表]( https://docs.qq.com/sheet/DSnhIcVJDTnVHcER0?tab=txwm2e)
+- 【腾讯文档】[数算B-13班上机座次表]( https://docs.qq.com/sheet/DSnhIcVJDTnVHcER0?tab=txwm2e )
 
 ### Markdown格式
 
 一种很受欢迎的写文档的工具。如果要写一本很“漂亮”的书，那是比不上LaTex的。Markdown可以通过嵌入html来获得一些丰富的格式，但对于在线文档，最简单的格式和功能就足够了。Markdown最大的好处是**简单高效**，高端的食材往往只需要最简单的烹饪方法。VScode就可以很好的编辑、预览md。
 
 参考：<br>
-- [Markdown基本语法](https://www.markdownguide.org/basic-syntax/)
+- [Markdown基本语法]( https://www.markdownguide.org/basic-syntax/ )
 
 ### 如何协作--提交代码并参与讨论
 
@@ -46,7 +46,7 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 
 
 参考：<br>
-[How to contribute to open source projects (our community project walkthrough)](https://www.youtube.com/watch?v=dLRA1lffWBw)
+[How to contribute to open source projects (our community project walkthrough)]( https://www.youtube.com/watch?v=dLRA1lffWBw )
 
 #### 国内镜像地址
 
