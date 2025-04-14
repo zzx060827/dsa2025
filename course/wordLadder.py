@@ -1,8 +1,8 @@
-from graph import Graph, Vertex2
+from graph import Graph, Vertex
 from bfs import bfs
 def buildGraph(wordFile):
     d = {}
-    g = Graph(Vertex2)
+    g = Graph(Vertex)
     with open(wordFile, 'r') as f:
         for line in f:
             word = line[:-1]

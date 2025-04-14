@@ -1,6 +1,8 @@
 class VertBase:
     """
     有向带权图的顶点
+    当自定义类的对象用作字典的键值时，缺省使用系统hash()函数，它基于id()函数实现，
+    也就是说，一个对象的哈希值在它的生命周期期间是固定的。
     """
     def __init__(self, key):
         self.id = key
@@ -27,7 +29,7 @@ class VertBase:
             del(self.connectedTo[nbr])
 
     def __str__(self):
-        return f"{self.id}({self.inDegree}:{self.outDegree})"
+        return f"{self.id}({self.inDegree}:{self.outDegree})-->{[x.id for x in self.connectedTo]}"
 
     __repr__ = __str__
 
@@ -54,7 +56,7 @@ class Graph:
     """
     def __init__(self, Vert=VertBase, other=None):
         """
-        Vert：顶点类型，需要继承基础顶点Vertex
+        Vert: 顶点类型，需要继承基础顶点Vertex
         other: 复制other中所有的顶点和边
         """
         assert issubclass(Vert, VertBase)
@@ -80,8 +82,7 @@ class Graph:
 
     def addVertex(self, key):
         if key not in self:
-            newVertex = self.Vertex(key)
-            self.vertList[key] = newVertex
+            self.vertList[key] = Vertex(key)
         return self.vertList[key]
 
     def getVertex(self, key):
@@ -180,3 +181,13 @@ class Vertex(VertBase):
     def setColor(self, color):
         self.color = color
 
+if __name__=="__main__":
+    g = Graph()
+    for i in range(6):
+        g.addVertex(i)
+    g.addEdge(1,4)
+    g.addEdge(1,4)
+    g.addEdge(6,1)
+    g.addEdge(6,4)
+    for v in g:
+        print(v)
