@@ -36,7 +36,7 @@ class BinaryHeap:
 
     def percDown(self, i):
         mc = self.minChild(i)
-        while mc and self.at(mc) <= self.at(i):
+        while mc and self.at(mc) < self.at(i):
             self.heaplist[i], self.heaplist[mc] = self.heaplist[mc], self.heaplist[i]
             i, mc = mc, self.minChild(mc)
 
@@ -48,22 +48,6 @@ class BinaryHeap:
 
     def at(self, i):
         return self.heaplist[i] if i<=self.size() else None
-
-class Node:
-    def __init__(self, key, value):
-        self.key = key
-        self.value = value
-
-    def __lt__(self, op2):
-        return self.key < op2.key
-
-    def __le__(self, op2):
-        return self.key <= op2.key
-
-    def __str__(self):
-        return "({}, {})".format(self.key, self.value)
-
-    __repr__ = __str__
 
 if __name__ == "__main__":
     bh = BinaryHeap()
@@ -80,17 +64,6 @@ if __name__ == "__main__":
     print('*********')
     bh.buildHeap([3, 3, 5, 9, 1, 11])
     print(bh.delMin())
-    print(bh.delMin())
-    print(bh.delMin())
-    print(bh.delMin())
-    print(bh.delMin())
-    print(bh.delMin())
-
-    bh.insert(Node(2, 1))
-    bh.insert(Node(2, 2))
-    bh.insert(Node(1, 3))
-    bh.insert(Node(2, 4))
-    bh.insert(Node(2, 5))
     print(bh.delMin())
     print(bh.delMin())
     print(bh.delMin())
