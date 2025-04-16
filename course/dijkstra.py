@@ -31,8 +31,10 @@ def dijkstra(aGraph, start):
 
     pq = BinaryHeap()
 
-    start.setDistance(0)   #对所有顶点建堆，形成优先队列
-    add_task(start, start.getDistance())
+    start.setDistance(0)                      #起始点的dist为0
+    #对所有顶点建堆，形成优先队列
+    for v in g:
+        add_task(v, v.getDistance())
     while not pq.isEmpty():
         try :
             currentVert = pop_task()          #优先队列出队
