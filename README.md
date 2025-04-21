@@ -67,6 +67,7 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 | 第七周 | 排序与查找 |  OJ作业[排序与查找](http://xzmdsa.openjudge.cn/)          |        |
 | 第八周 | 排序与查找 |                                                          |        |
 | 第九周 | 树及算法 | OJ作业[树及算法]( http://xzmdsa.openjudge.cn/ )            |        |
+| 第十周 | 期中模拟考试 |                                               |        |
 
 ###  重要通知
 - 2/25/2025 第三周（3/4/2025）上课时间随堂小测，考察Python基础技能。
