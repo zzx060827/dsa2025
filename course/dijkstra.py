@@ -1,4 +1,4 @@
-from graph import Graph, Vertex
+import graph
 import queue
 
 def dijkstra(aGraph, start):
@@ -27,7 +27,7 @@ if __name__ == "__main__":
         g.addEdge(u, v, weight)
         g.addEdge(v, u, weight)
 
-    g = Graph(Vertex)
+    g = graph.Graph(graph.Vertex)
     addEdge(g, 'u', 'v', 2)
     addEdge(g, 'w', 'v', 3)
     addEdge(g, 'u', 'w', 5)
