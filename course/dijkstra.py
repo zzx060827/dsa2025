@@ -1,54 +1,26 @@
 from graph import Graph, Vertex
-from binHeap import BinaryHeap
-import itertools
+import queue
 
 def dijkstra(aGraph, start):
-    entry_finder = {}               # mapping of tasks to entries
-    REMOVED = '<removed-task>'      # placeholder for a removed task
-    counter = itertools.count()     # unique sequence count
+    pq = queue.PriorityQueue()
 
-    def add_task(task, priority=0):
-        'Add a new task or update the priority of an existing task'
-        if task in entry_finder:
-            remove_task(task)
-        entry = [priority, next(counter), task]
-        entry_finder[task] = entry
-        pq.insert(entry)
-
-    def remove_task(task):
-        'Mark an existing task as REMOVED.  Raise KeyError if not found.'
-        entry = entry_finder.pop(task)
-        entry[-1] = REMOVED
-
-    def pop_task():
-        'Remove and return the lowest priority task. Raise KeyError if empty.'
-        while not pq.isEmpty():
-            priority, count, task = pq.delMin()
-            if task is not REMOVED:
-                del entry_finder[task]
-                return task
-        raise KeyError('pop from an empty priority queue')
-
-    pq = BinaryHeap()
-
-    start.setDistance(0)                      #起始点的dist为0
+    start.setDistance(0)                   #起始点的dist为0
     #对所有顶点建堆，形成优先队列
     for v in g:
-        add_task(v, v.getDistance())
+        pq.add_task(v, v.getDistance())
     while not pq.isEmpty():
         try :
-            currentVert = pop_task()          #优先队列出队
+            curr = pq.pop_task()    #优先队列出队
         except KeyError:
             break
-        for nextVert in currentVert.getConnections():
-            newDist = currentVert.getDistance() \
-                    + currentVert.getWeight(nextVert)
-                   #修改出队顶点所邻顶点dist和前驱节点，
-                   #                          并重排队列
-            if newDist < nextVert.getDistance():
-                nextVert.setDistance(newDist)
-                nextVert.setPred(currentVert)
-                add_task(nextVert, newDist)
+        for nbr in curr.getConnections():
+            newDist = curr.getDistance() \
+                    + curr.getWeight(nbr)
+            if newDist < nbr.getDistance():
+                #更新邻居结点
+                nbr.setDistance(newDist)
+                nbr.setPred(curr)
+                pq.add_task(nbr, newDist)
 
 if __name__ == "__main__":
     def addEdge(g, u, v, weight):
