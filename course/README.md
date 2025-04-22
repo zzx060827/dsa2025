@@ -1,5 +1,6 @@
 ## 这个目录下面放的是课程中出现的所有代码
 
+- eq_hash.py                 测试用户自定义类的__eq__和__hash__关系
 - node.py                    单链表结点类，里面实现了一个对链表的插入排序
 - unOrderedList.py           无序表
 - linkedList.py              链表操作作业模版
