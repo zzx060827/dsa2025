@@ -64,10 +64,11 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 | 第四周 | 线性表     |        OJ作业[线性表](http://xzmdsa.openjudge.cn/2025hw2/)       |     |
 | 第五周 | 递归与动规 |        OJ作业[递归与动规](http://xzmdsa.openjudge.cn/2025hw3/)      |        |
 | 第六周 | 递归与动规，KMP |                                                       |        |
-| 第七周 | 排序与查找 |  OJ作业[排序与查找](http://xzmdsa.openjudge.cn/)          |        |
+| 第七周 | 排序与查找 |  OJ作业[排序与查找]( http://xzmdsa.openjudge.cn/hw4 )          |        |
 | 第八周 | 排序与查找 |                                                          |        |
-| 第九周 | 树及算法 | OJ作业[树及算法]( http://xzmdsa.openjudge.cn/ )            |        |
+| 第九周 | 树及算法 | OJ作业[树及算法]( http://xzmdsa.openjudge.cn/hw5 )            |        |
 | 第十周 | 期中模拟考试 |                                               |        |
+| 第十一周 | 模拟题讲解，树及算法 |                                         |        |
 
 ###  重要通知
 - 2/25/2025 第三周（3/4/2025）上课时间随堂小测，考察Python基础技能。
