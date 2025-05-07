@@ -6,16 +6,25 @@ class TreeNode:
 def insert(root, val):
     if root is None:
         return TreeNode(val)
-    if val <= root.val:
+    '''
+    按照二叉搜索树的定义，树中是不能有两个等值结点的，
+    需要用后面的替换前面的，所以这里要判断三种情况：
+       < , >, =
+    从样例中可以看到这一点：输入两个827，但是只输出一个
+    '''
+    if val < root.val:
         root.left = insert(root.left, val)
-    else:
+    elif val > root.val:
         root.right = insert(root.right, val)
+    else:
+        pass
     return root
 def preorder(root, result):
     if root:
         result.append(root.val)
         preorder(root.left, result)
         preorder(root.right, result)
+
 nums = list(map(int, input().split()))
 root = None
 for num in nums:
@@ -23,33 +32,3 @@ for num in nums:
 result = []
 preorder(root, result)
 print(' '.join(map(str, result)))
-################################################
-"""
-class TreeNode:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
-def insert(root, value):
-    if root is None:
-        return TreeNode(value)
-    if value < root.value:
-        root.left = insert(root.left, value)
-    elif value > root.value:
-        root.right = insert(root.right, value)
-    return root
-def preorder_traversal(root):
-    if root is None:
-        return []
-    return [root.value] + preorder_traversal(root.left) + preorder_traversal(root.right)
-def main():
-    input_line = input().strip()
-    numbers = list(map(int, input_line.split()))
-    root = None
-    for number in numbers:
-        root = insert(root, number)
-    result = preorder_traversal(root)
-    print(' '.join(map(str, result)))
-if __name__ == '__main__':
-    main()
-"""
