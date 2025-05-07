@@ -1,13 +1,3 @@
-# P0060:链表寻环
-## 时间限制
-- 总时间限制: 2000ms 
-
-## 内存限制
-655360kB
-
-## 题目描述
-请设计时间复杂度O(n)的算法判断一个单链表是否有环。要求额外空间复杂度O(1)。
-
 import random
 class Node:
 	def __init__(self, data, next=None):
@@ -22,8 +12,17 @@ class LinkList:
 			p.next = node
 			p = p.next
 	def loopExists(self):
-// 在此处补充你的代码
-####
+		a = self.head
+		b = self.head
+		try:
+			while True:
+				a = a.next
+				b = b.next.next
+				if a is b:
+					return "True"
+		except Exception:
+			return "False"
+				
 while True:
 	try:
 		n,m = map(int,input().split())
@@ -47,22 +46,3 @@ while True:
 			p = p.next
 		last.next = q
 	print(lst.loopExists())
-
-## 输入
-若干行。
-每行有两个整数n和m，表示一个长度为n的链表。m为1表示该链表有环，为0表示该链表无环。
-
-## 输出
-对每张链表，如果有环输出"True"如果五环输出"False"。注意大小写。
-
-## 样例输入
-10 1
-999992 1
-20 0
-3 0
-
-## 样例输出
-True
-True
-False
-False
