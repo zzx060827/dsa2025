@@ -18,20 +18,6 @@ class LinkList:
 			p.next = node
 			p = p.next
 	def loopExists(self):
-		p1 = self.head
-		p2 = self.head.next
-		if p2 is not None:
-			p2 = p2.next
-		while p1 is not None and p2 is not None:
-			p1 = p1.next
-			p2 = p2.next
-			if p2 is not None:
-				p2 = p2.next
-			if p1 is p2:
-				return True
-		return False
-
-	def loopExists1(self):
 // 在此处补充你的代码
 ####
 while True:
