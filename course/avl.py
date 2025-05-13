@@ -37,7 +37,17 @@ class AVL(BinarySearchTree):
         return curr
 
     def _put(self, key, val, curr):
-        curr = super()._put(key, val, curr)
+        if curr is None:
+            self.size += 1
+            return self.TreeNode(key, val)
+        if key < curr.key:           #递归左子树
+            curr.leftChild = self._put(key, val, curr.leftChild)
+            curr.leftChild.parent = curr
+        elif key > curr.key:         #递归右子树
+            curr.rightChild = self._put(key, val, curr.rightChild)
+            curr.rightChild.parent = curr
+        else: #key == curr.key
+            curr.payload = val       #更新结点，无新增
         return self.checkBalance(curr)
 
     def delete(self, key):
