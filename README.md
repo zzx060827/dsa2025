@@ -80,4 +80,5 @@ contributor下次开新的branch的时候，并不需要每次都fork主仓库�
 	- 小测地址：http://xzmdsa.openjudge.cn/2025test2/
 - 4/15/2025 第十周（4/22/2025）上课时间随堂小测，考察排序与查找一章
 - 5/13/2025 第十四周（5/20/2025）上课时间随堂小测，考察树及算法一章
+	- 小测地址：http://xzmdsa.openjudge.cn/2025test4/
 
