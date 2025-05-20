@@ -37,7 +37,7 @@ def knightTour(n, path, u, limit):
         return True
 
 if __name__ == "__main__":
-    bd_size = 8
+    bd_size = int(input("Please input board size:"))
     g = knightGraph(bd_size)
     path=[]
     start = g.getVertex((1, 1))
