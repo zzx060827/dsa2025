@@ -9,4 +9,7 @@
 - graph.py                   图的实现
 - bfs.py                     广度优先搜索
 - wordLadder.py              词梯问题，使用了广度优先搜索
+- knight.py                  骑士周游问题
+- DFSGraph.py                通用的深度优先搜索及拓扑排序
+- DG2SC.py                   有向图增强算法，实现了SCC
 - dijkstra.py                dijkstra最短路径算法，使用二叉堆优先队列
