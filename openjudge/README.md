@@ -24,3 +24,4 @@
 - 5442/README.md       P1282:兔子与星空
 - 24637/README.md      250508: 宝藏二叉树
 - 8581/README.md       P0700:扩展二叉树
+- 22116/README.md      P0020:删除链表元素(Python版)
